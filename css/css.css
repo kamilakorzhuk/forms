@@ -1,0 +1,620 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/subset-Roboto-Bold.eot');
+    src: url('../fonts/subset-Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Bold.woff') format('woff'),
+        url('../fonts/subset-Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/subset-Roboto-Regular.eot');
+    src: url('../fonts/subset-Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Regular.woff') format('woff'),
+        url('../fonts/subset-Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/subset-RobotoSlab-Bold.eot');
+    src: url('../fonts/subset-RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/subset-RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/subset-RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.wraper{
+    margin: 0 auto;
+    width: 74%;
+}
+.clear::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+body{
+    margin: 0;
+}
+h1{
+    font: 30px 'Roboto Slab', serif;
+    color: #1f222c;
+    text-align: center;
+}
+h2{
+    color: #b3b3b3;
+    font: bold 20px 'Roboto', sans-serif;
+    text-transform: uppercase;
+    padding-top: 50px;
+}
+.robotobold{
+    font-size: 18px;
+    color: #1f222c;
+    font-weight: bold;
+}
+input{
+    margin-right: 10px;
+}
+.normalform,
+.elements,
+.style-checkbox,
+.table{
+    padding-bottom: 50px;
+    border-bottom:  1px solid #b3b3b3;
+}
+.pt0{
+    padding-top: 0;
+}
+.robotoregular{
+    font: normal 14px 'Roboto';
+}
+.normalform label{
+    display: block;
+    padding: 5px 0;
+}
+.normalform input{
+    padding: 12px 15px;
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    width: 330px;
+}
+.normalform input::-webkit-input-placeholder{
+    color: #b3b3b3;
+    font-size: 14px;
+}
+.normalform textarea{
+    width: 330px;
+    height: 125px;
+    resize: none;
+    padding: 12px 15px; 
+}
+.normalform input[type="submit"]{
+    background-color: #12d661;
+    color: white;
+    font: bold 14px 'Roboto';
+    border: none;
+}
+.normalform select{
+    padding: 12px;
+    border-radius: 2px;
+    width: 330px;
+}
+.normalform select option{
+    padding: 12px 15px;
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+    width: 330px;
+}
+.post{
+    width: 166px;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.post label::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -21px;
+    top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+}
+.post label:last-child:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -21px;
+    top: 5px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #f7f7f7;
+}
+.post input:checked + label:before,
+.rules input:checked + label:before,
+.accept:checked + label:before,
+.remember:checked + label:before{
+    border: 1px solid #3e6aff;
+}
+.post input:checked + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    left: -16px;
+    top: 10px;
+    border-radius: 8px;
+    background-color: #3e6aff;
+}
+.rules{
+    width: 421px;
+    box-sizing: border-box;
+}
+.rules input,
+.post input,
+.state input,
+.functional-checkbox input{
+    display: none;
+}
+.post label,
+.rules label,
+.checkboxes label,
+.date,
+.state label,
+.state label{
+    position: relative;
+} 
+.post label,
+.rules label{
+    display: block;
+    padding: 5px 0;
+}
+.rules label::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -25px;
+    top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: #fff;
+}
+.rules label:last-child:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -25px;
+    top: 4px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    background: #f7f7f7;
+}
+.rules input:checked + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: -20px;
+    top: 9px;
+    border-radius: 2px;
+    background-image: url(../images/check.png);
+}       
+.left-elements,
+.status-data{
+    float: left;
+}
+.right-elements,
+.checkout{
+    float: right;
+}
+.right-elements fieldset{
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    padding: 5px 17px;
+    width: 471px;
+}
+.disabled{
+    color: #b3b3b3;
+}
+.status-data{
+    padding-right: 32px;
+    color: #b3b3b3;
+}
+.checkboxes label:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -23px;
+    top: -1px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: #fff;
+}
+.checkboxes input:checked + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: -18px;
+    top: 4px;
+    border-radius: 2px;
+    background-image: url(../images/check.png);
+}
+.elements p{
+    line-height: 60px;
+    margin: 0;
+}
+.date{
+    padding: 9px 11px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    width: 148px;
+    box-sizing: border-box;
+}
+.date:after{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px; 
+    right: 13px;
+    top: 10px;
+    background-image: url(../images/date.png);
+    z-index: 2;
+    position: absolute;
+}
+.state{
+    width: 500px;
+    font-size: 16px;
+}
+.state label{
+    display: block;
+    margin-left: 85px;
+    line-height: 80px;
+}
+.man:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    left: -85px;
+    top: -3px;
+    background-image: url(../images/manblack.png);
+    z-index: 2;
+    position: absolute;
+    transition: background-image 1s ease;
+}
+input:checked+.man:before{
+    background-image: url(../images/mankolor.png);
+    transition: background-image 1s ease;
+}
+.woman::before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    left: -85px;
+    top: 0px;
+    background-image: url(../images/womanblack.png);
+    z-index: 2;
+    position: absolute;
+    transition: background-image 1s ease;
+}
+input:checked+.woman:before{
+    background-image: url(../images/womankolor.png);
+    transition: background-image 1s ease;
+}
+.functional-checkbox label{
+    display: block;
+    line-height: 35px;
+    position: relative;
+    line-height: 40px;
+}
+.functional-checkbox label::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    left: -65px;
+    top: 5px;
+    border-radius: 13px;
+    background-color: #cfcfd1;
+    transition: background-color 1s ease;
+}
+.functional-checkbox input:checked + label::before{
+    background-color: #3e6aff;
+}
+.functional-checkbox label:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: -63px;
+    top: 7px;
+    border-radius: 13px;
+    background-color: #fff;
+    transition: left .5s ease;
+}
+.functional-checkbox input:checked + label:after{
+    left: -43px;
+}
+.table input[type="text"],
+.table input[type="password"],
+.table select{
+    width: 340px;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+.labelman{
+    position: relative;
+}
+.labelman:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -27px;
+    top: -1px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+}
+.labelwoman{
+    position: relative;
+}
+.labelwoman:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -24px;
+    top: -1px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+}
+.selectfile{
+    padding: 10px 40px;
+    border: none;
+    border-radius: 2px;
+    background-color: #3e6aff;
+    color: #fff;
+}
+.pb{
+    padding-bottom: 30px;
+}
+.table td{
+    padding-bottom: 15px;
+}
+.table textarea{
+    height: 130px;
+    width: 340px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 13px;
+}
+.mb h3{
+    margin-bottom: 40px; 
+}
+.table input[type="submit"]{
+    padding: 15px 113px;
+    background-color: #12d661;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+.table-second{
+    position: relative;
+    padding: 0;
+    width: 680px;
+}
+.table-second td{
+    width: 218px;
+    position: relative;
+}
+.table-second select,
+.table-second input{
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 13px;
+    margin-bottom: 35px;
+}
+.table-second label{
+    color: #b3b3b3;
+    font:  normal 13px 'Roboto', sans-serif;
+    padding-bottom: 7px;
+    position: absolute;
+    top: -20px;
+}
+.table-second select{
+    padding: 12px 13px;
+}
+.table-second:before{
+    top: 75px;
+}
+.table-second:before,
+.table-second::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e9e9e9;
+    left: 0;
+}
+.table-second:after{
+    bottom: -62px;
+}
+.adress{
+    width: 448px;
+}
+.accept + label{
+    position: relative;
+}
+.accept + label::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -29px;
+    top: -1px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: #fff;
+}
+.accept:checked + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: -24px;
+    top: 4px;
+    border-radius: 2px;
+    background-image: url(../images/check.png);
+}
+.back{
+    border: 1px solid #85868d;
+    border-radius: 3px;
+    color: #6e6f77;
+    background-color: #fff;
+    padding: 14px 25px;
+    font: bold 14px 'Roboto', sans-serif;
+}
+.back:hover{
+    color: #fff;
+    background-color: #6e6f77;
+    margin: 0;
+}
+.checkout{
+    padding: 15px 28px;
+    background-color: #12d661;
+    color: #fff;
+    border-radius: 2px; 
+    border: none;
+    margin: 0;
+}
+.checkout:hover{
+    background-color: #07be51;
+    box-shadow: 2px 5px 
+}
+.mb p{
+    width: 680px;
+}
+.mb30{
+    margin-bottom: 58px;
+}
+.table-second tr .mb14 input{
+    margin-bottom: 14px;
+}
+.fixed{
+    position: fixed;
+    width: 232px;
+    right: 19%;
+    top: 67px;
+    z-index: 2;
+}
+.fixed h2{
+    padding: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+.tablecloth{
+    top: 30px;
+    width: 310px;
+    padding: 23px;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+.fixed input[type="button"]{
+    background-color: #12d661;
+    color: white;
+    font: bold 14px 'Roboto';
+    border: none;
+    width: 100%;
+    padding: 13px 0;
+    border-radius: 2px;
+}
+.fixed table{
+    width: 100%;
+    text-decoration: none;
+}
+.fixed table input:not([type="checkbox"]){
+    width: 100%;
+    padding: 10px 13px;
+    border-radius: 2px;
+    border: 1px solid #b3b3b3;
+}
+.forget{
+    color: #3e6aff;
+    text-decoration: none;
+}  
+.remember + label{
+    position: relative;
+    padding-bottom: 16px; 
+}
+.remember + label:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -27px;
+    top: -2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: #fff;
+}
+.remember:checked + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: -22px;
+    top: 3px;
+    border-radius: 2px;
+    background-image: url(../images/check.png);
+}
+.pb5{
+    padding-bottom: 5px;
+    color: #b3b3b3;
+}
+.pb10{
+    padding-bottom: 10px;
+}
+.pb12{
+    padding-bottom: 12px;
+}
+.pb16{
+    padding-bottom: 16px;
+}
